@@ -1,34 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablón de Notas de la Clase</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; background: #fafafa; }
-        form { display: flex; flex-direction: column; gap: 10px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        input, textarea, button { padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
-        button { background: #0070f3; color: white; cursor: pointer; border: none; font-weight: bold; }
-        button:hover { background: #0051ba; }
-        .nota { background: white; padding: 15px; margin-top: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-left: 5px solid #0070f3; }
-        .autor { font-weight: bold; color: #333; margin-bottom: 5px; }
-        p { margin: 0; color: #555; }
-    </style>
-</head>
-<body>
 
-    <h2>📝 Nueva Nota</h2>
-<form id="notaForm">
-    <input type="hidden" id="notaId"> 
-    
-    <input type="text" id="autor" placeholder="Tu nombre" required>
-    <textarea id="contenido" placeholder="Escribe tu mensaje aquí..." required></textarea>
-    
-    <button type="submit" id="btnSubmit">Publicar Nota</button>
-</form>
-    <h2>📌 Mensajes del Grupo</h2>
-    <div id="contenedorNotas">Cargando notas...</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Tablón de Notas de la Clase</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 500px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fafafa;
+            }
 
-    <script src="app.js"></script>
-</body>
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            input,
+            textarea,
+            button {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+
+            button {
+                background: #0070f3;
+                color: white;
+                cursor: pointer;
+                border: none;
+                font-weight: bold;
+            }
+
+            button:hover {
+                background: #0051ba;
+            }
+
+            .nota {
+                background: white;
+                padding: 15px;
+                margin-top: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                border-left: 5px solid #0070f3;
+            }
+
+            .autor {
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin: 0;
+                color: #555;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>📝 Nueva Nota</h2>
+        <form id="notaForm">
+            <input
+                type="hidden"
+                id="notaId"
+            />
+            <input
+                type="text"
+                id="autor"
+                placeholder="Tu nombre"
+                required
+            />
+            <textarea
+                id="contenido"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+            ></textarea>
+            <button
+                type="submit"
+                id="btnSubmit"
+            >Publicar Nota</button>
+        </form>
+        <h2>📌 Mensajes del Grupo</h2>
+        <div id="contenedorNotas">Cargando notas...</div>
+        <script src="app.js"></script>
+    </body>
+
 </html>
